@@ -1,0 +1,230 @@
+Тестирование функции микросервиса на подстановку единиц измерений.  
+1.1	В окне счетчика воды отражается «1 л воды» при значении параметра water «1»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":1}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика воды отображается «1 л воды было сохранено».
+
+1.2 В окне счетчика воды отражается «998 л воды» при значении параметра water «998»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":998}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика воды отображается «998 л воды было сохранено».
+
+1.3 В окне счетчика воды отражается «999 л воды» при значении параметра water «999»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":999}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика воды отображается «999 л воды было сохранено».
+
+1.4	В окне счетчика воды отражается «1 м3 воды» при значении параметра water «1000»
+Предусловие: 
+4.	Запущен сниффер Fiddler.
+5.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+6.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+3.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":1000}}},"isAuthorized":false},"status":"ok"}.
+4.	Кликнуть на Run to Completion.
+ОР: В окне счетчика воды отображается «1 м3 воды было сохранено»
+
+1.5 В окне счетчика воды отражается «1 м3 воды» при значении параметра water «1001»
+Предусловие: 
+4.	Запущен сниффер Fiddler.
+5.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+6.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+3.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":1001}}},"isAuthorized":false},"status":"ok"}.
+4.	Кликнуть на Run to Completion.
+ОР: В окне счетчика воды отображается «1 м3 воды было сохранено»
+
+2.1 В окне счетчика объёма выброса CO2 отражается «1 кг CO2» при значении параметра co2 «1»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":1,"energy":0,"materials":0,"pineYears":0,"water":0}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика объёма выброса CO2 отображается «1 кг CO2 не попало в атмосферу»
+
+2.2 В окне счетчика объёма выброса CO2 отражается «98 кг CO2» при значении параметра co2 «98»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":98,"energy":0,"materials":0,"pineYears":0,"water":0}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика объёма выброса CO2 отображается «98 кг CO2 не попало в атмосферу»
+
+2.3 В окне счетчика объёма выброса CO2 отражается «99 кг CO2» при значении параметра co2 «99»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":99,"energy":0,"materials":0,"pineYears":0,"water":0}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика объёма выброса CO2 отображается «99 кг CO2 не попало в атмосферу»
+
+2.4 В окне счетчика объёма выброса CO2 отражается «1 ц CO2» при значении параметра co2 «100»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":100,"energy":0,"materials":0,"pineYears":0,"water":0}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика объёма выброса CO2 отображается «1 ц CO2 не попало в атмосферу»
+
+2.5 В окне счетчика объёма выброса CO2 отражается «1 ц CO2» при значении параметра co2 «101»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":101,"energy":0,"materials":0,"pineYears":0,"water":0}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика объёма выброса CO2 отображается «1 ц CO2 не попало в атмосферу»
+
+2.6 В окне счетчика объёма выброса CO2 отражается «9,98 ц CO2» или "9,9ц CO2" при значении параметра co2 «998»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":998,"energy":0,"materials":0,"pineYears":0,"water":0}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика объёма выброса CO2 отображается «9,98 ц CO2 не попало в атмосферу»/«9,9 ц CO2 не попало в атмосферу»
+
+2.7 В окне счетчика объёма выброса CO2 отражается «9,99 ц CO2» или "9,9ц CO2" при значении параметра co2 «999»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":999,"energy":0,"materials":0,"pineYears":0,"water":0}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика объёма выброса CO2 отображается «9,98 ц CO2 не попало в атмосферу»/«9,9 ц CO2 не попало в атмосферу»
+
+2.8 В окне счетчика объёма выброса CO2 отражается «1 т CO2» при значении параметра co2 «1000»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":1000,"energy":0,"materials":0,"pineYears":0,"water":0}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика объёма выброса CO2 отображается «1 т CO2 не попало в атмосферу»
+
+2.9 В окне счетчика объёма выброса CO2 отражается «1 т CO2» при значении параметра co2 «1001»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":1001,"energy":0,"materials":0,"pineYears":0,"water":0}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика объёма выброса CO2 отображается «1 т CO2 не попало в атмосферу»
+
+3.1	В окне счетчика электроэнергии отражается «1 квт.ч энергии» при значении параметра energy «1»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":1}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика электроэнергии отражается «1 квт.ч энергии было сэкономлено».
+
+3.2 В окне счетчика электроэнергии отражается «9,98 квт.ч энергии» или «9,9 квт.ч энергии» при значении параметра energy «998»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":998}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика электроэнергии отражается «9,98 квт.ч энергии было сэкономлено»/«9,9 квт.ч энергии было сэкономлено».
+
+3.3 В окне счетчика электроэнергии отражается «9,99 квт.ч энергии» или «9,9 квт.ч энергии» при значении параметра energy «999»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":999}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика электроэнергии отражается «9,99 квт.ч энергии было сэкономлено»/«9,9 квт.ч энергии было сэкономлено».
+
+3.4 В окне счетчика электроэнергии отражается «1 мвт.ч энергии» при значении параметра energy «1000»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":1000}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика электроэнергии отражается «1 мвт.ч энергии энергии было сэкономлено».
+
+3.5 В окне счетчика электроэнергии отражается «1 мвт.ч энергии» при значении параметра energy «1001»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":1001}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика электроэнергии отражается «1 мвт.ч энергии энергии было сэкономлено».
+
+3.6 В окне счетчика электроэнергии отражается «999,9 мвт.ч энергии» или «999 мвт.ч энергии» при значении параметра energy «999998»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":999998}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика электроэнергии отражается «999,9 мвт.ч энергии было сэкономлено»/«999 мвт.ч энергии было сэкономлено».
+
+3.7 В окне счетчика электроэнергии отражается «999,9 мвт.ч энергии» или «999 мвт.ч энергии» при значении параметра energy «999999»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":999999}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика электроэнергии отражается «999,9 мвт.ч энергии было сэкономлено»/«999 мвт.ч энергии было сэкономлено».
+
+3.8 В окне счетчика электроэнергии отражается «1 гвт.ч энергии» при значении параметра energy «1000000»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":1000000}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика электроэнергии отражается «1 гвт.ч энергии было сэкономлено».
+
+3.9 В окне счетчика электроэнергии отражается «1 гвт.ч энергии» при значении параметра energy «1000001»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":1000001}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика электроэнергии отражается «1 гвт.ч энергии было сэкономлено».
