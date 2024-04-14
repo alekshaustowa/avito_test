@@ -1,0 +1,27 @@
+1. БР к тест-кейсу 2.4.
+В окне счетчика объёма выброса CO2 не отражается «1 ц CO2» при значении параметра co2 «100»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":100,"energy":0,"materials":0,"pineYears":0,"water":0}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика объёма выброса CO2 отображается «1 ц CO2 не попало в атмосферу»
+ФР: В окне счетчика объёма выброса CO2 отображается «100 кг CO2 не попало в атмосферу»
+Окружение: Сервис https://www.avito.ru/avito-care/eco-impact#block, Браузер Яндекс Браузер 24.1.5.736 (64-bit), ОС Windows 10
+Приоритет: Серьезный 
+
+2. БР к тест-кейсу 2.4.
+В окне счетчика электроэнергии не отображается «1 гвт.ч энергии» при значении параметра energy «1000000»
+Предусловие: 
+1.	Запущен сниффер Fiddler.
+2.	Открыт сайт https://www.avito.ru/avito-care/eco-impact
+3.	С помощью функции Breakpoints перехватить ответ с сервиса: https://www.avito.ru/web/1/charity/ecoImpact/init 
+Шаги:
+1.	В ответе с сервиса ввести: {"result":{"blocks":{"personalImpact":{"data":{"co2":0,"energy":0,"materials":0,"pineYears":0,"water":1000000}}},"isAuthorized":false},"status":"ok"}.
+2.	Кликнуть на Run to Completion.
+ОР: В окне счетчика электроэнергии отражается «1 гвт.ч энергии было сэкономлено».
+ФР: В окне счетчика объёма выброса CO2 отображается «1 млн квт.ч энергии было сэкономлено». Текст "квт ч. энергии" перекрыл текст "было сэкономлено".
+Окружение: Сервис https://www.avito.ru/avito-care/eco-impact#block, Браузер Яндекс Браузер 24.1.5.736 (64-bit), ОС Windows 10
+Приоритет: Серьезный 
